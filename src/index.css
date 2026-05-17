@@ -1,0 +1,20 @@
+@import "tailwindcss";
+/* body {
+  @apply bg-[#0B0F19] text-white;
+} */
+body {
+  @apply bg-[#0B0F19] text-white;
+  font-family: system-ui, sans-serif;
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text;
+}
