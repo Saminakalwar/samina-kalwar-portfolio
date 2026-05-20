@@ -4,36 +4,38 @@ import { Award, ExternalLink, Download } from "lucide-react";
 export default function Certificates() {
   const certificates = [
     {
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "March 2024",
+      title: "Introduction To MongoDB",
+      issuer: "MongoDB ",
+      date: "2023",
+      color: "from-green-500 to-emerald-500",
+      credentialUrl: "https://learn.mongodb.com/c/PtRLf_ZsRxi_9ptI9BBkFg",
+      credentialId: "MDB32uqngh4im",
+    },
+    {
+      title: "Machine Learning Specialization",
+      issuer: "Stanford University, Coursera",
+      date: "2025",
+      color: "from-blue-500 to-cyan-500",
+      credentialUrl:
+        "https://www.coursera.org/account/accomplishments/specialization/9VO67UX3OXZR",
+      credentialId: "9VO67UX3OXZR",
+    },
+    {
+      title: "Deep Learning Specialization",
+      issuer: "Stanford University, Coursera",
+      date: "2025",
       color: "from-orange-500 to-yellow-500",
       credentialUrl: "https://aws.amazon.com/certification/",
       credentialId: "AWS-12345-XYZ",
     },
+
     {
-      title: "Microsoft Azure Fundamentals",
-      issuer: "Microsoft",
-      date: "January 2024",
-      color: "from-blue-500 to-cyan-500",
-      credentialUrl: "https://learn.microsoft.com/en-us/certifications/",
-      credentialId: "AZ-900-54321",
-    },
-    {
-      title: "MongoDB Certified Developer",
-      issuer: "MongoDB University",
-      date: "November 2023",
-      color: "from-green-500 to-emerald-500",
-      credentialUrl: "https://university.mongodb.com/",
-      credentialId: "MONGO-DEV-789",
-    },
-    {
-      title: "Google Cloud Professional",
-      issuer: "Google Cloud",
-      date: "September 2023",
+      title: "Database Structure & Management with MySQL",
+      issuer: "Meta",
+      date: "March 2023",
       color: "from-red-500 to-pink-500",
-      credentialUrl: "https://cloud.google.com/certification",
-      credentialId: "GCP-PROF-456",
+      credentialUrl: "https://coursera.org/verify/UTHVG3HNVM4P",
+      credentialId: "UTHVG3HNVM4P",
     },
     {
       title: "Meta Front-End Developer",

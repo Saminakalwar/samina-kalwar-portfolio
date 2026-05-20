@@ -26,8 +26,8 @@ export default function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "samina@example.com",
-      href: "mailto:samina@example.com",
+      value: "kalwarsamina950@gmail.com",
+      href: "mailto:kalwarsamina950@gmail.com",
     },
     {
       icon: Phone,
@@ -39,8 +39,16 @@ export default function Contact() {
   ];
 
   const socialLinks = [
-    { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-    { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    {
+      icon: FaGithub,
+      href: "https://github.com/Saminakalwar",
+      label: "GitHub",
+    },
+    {
+      icon: FaLinkedin,
+      href: "www.linkedin.com/in/samina-kalwar",
+      label: "LinkedIn",
+    },
     { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
   ];
 
