@@ -3,10 +3,10 @@ import { Code2, Database, Zap, Award } from "lucide-react";
 
 export default function About() {
   const stats = [
-    { icon: Code2, label: "Projects Completed", value: "50+" },
-    { icon: Database, label: "Technologies", value: "25+" },
-    { icon: Zap, label: "Problem Solving", value: "Expert" },
-    { icon: Award, label: "Learning", value: "AI & Cloud" },
+    { icon: Code2, label: "Stack", value: "MERN" },
+    { icon: Database, label: "Enterprise Backend", value: "ASP.NET & Oracle" },
+    { icon: Zap, label: "Also Skilled In", value: "AI / ML" },
+    { icon: Award, label: "Problem Solving", value: "Expert" },
   ];
 
   return (
@@ -39,35 +39,40 @@ export default function About() {
           >
             <div className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-purple-500/30 transition-all">
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                Passionate Full Stack Developer
+                Full Stack Developer | Enterprise Backend & AI Enthusiast
               </h3>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Hi! I'm Samina Kalwar, a dedicated Full Stack Developer
-                specializing in the MERN stack. I create modern, scalable web
-                applications with a focus on clean code and exceptional user
-                experiences.
+                I'm Samina Kalwar, a Full Stack Developer who builds modern,
+                scalable web applications end-to-end — from responsive frontends
+                to robust, production-ready backend systems.
               </p>
               <p className="text-gray-400 leading-relaxed mb-4">
-                My expertise spans across{" "}
+                My core stack is{" "}
                 <span className="text-indigo-400 font-semibold">React.js</span>,{" "}
-                <span className="text-purple-400 font-semibold">Next.js</span>,{" "}
-                <span className="text-cyan-400 font-semibold">TypeScript</span>,{" "}
-                <span className="text-green-400 font-semibold">Node.js</span>,
+                <span className="text-purple-400 font-semibold">Node.js</span>,{" "}
+                <span className="text-cyan-400 font-semibold">Express.js</span>,
                 and{" "}
-                <span className="text-green-500 font-semibold">MongoDB</span>.
-                I'm passionate about building efficient backend systems and
-                beautiful, responsive frontends.
+                <span className="text-green-500 font-semibold">MongoDB</span>{" "}
+                (MERN). Alongside this, I'm expanding into enterprise-grade
+                backend development with{" "}
+                <span className="text-blue-400 font-semibold">
+                  ASP.NET Core
+                </span>{" "}
+                and{" "}
+                <span className="text-orange-400 font-semibold">
+                  Oracle Database
+                </span>
+                , building secure, scalable systems suited for large-scale
+                business applications.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                Currently exploring{" "}
-                <span className="text-purple-400 font-semibold">
-                  AI technologies
+                I also bring hands-on experience in{" "}
+                <span className="text-pink-400 font-semibold">
+                  Artificial Intelligence
                 </span>{" "}
-                and{" "}
-                <span className="text-indigo-400 font-semibold">
-                  Cloud Computing
-                </span>{" "}
-                to expand my skill set and deliver cutting-edge solutions.
+                — applied through my Final Year Project and several freelance
+                projects — giving me a practical edge in building intelligent
+                features into real-world applications.
               </p>
             </div>
           </motion.div>
