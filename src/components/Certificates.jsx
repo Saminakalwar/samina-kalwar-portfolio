@@ -4,12 +4,13 @@ import { Award, ExternalLink, Download } from "lucide-react";
 export default function Certificates() {
   const certificates = [
     {
-      title: "Introduction To MongoDB",
-      issuer: "MongoDB ",
-      date: "2023",
-      color: "from-green-500 to-emerald-500",
-      credentialUrl: "https://learn.mongodb.com/c/PtRLf_ZsRxi_9ptI9BBkFg",
-      credentialId: "MDB32uqngh4im",
+      title: "Python For Beginners In Depth",
+      issuer: "Udemy",
+      date: "March 2025",
+      color: "from-purple-500 to-violet-600",
+      credentialUrl:
+        "https://udemy-certificate.s3.amazonaws.com/image/UC-01ee1244-c721-4090-9f93-ba91915d512d.jpg?v=1750613383000",
+      credentialId: "UC-01ee1244-c721-4090-9f93-ba91915d512d",
     },
     {
       title: "Machine Learning Specialization",
@@ -23,19 +24,37 @@ export default function Certificates() {
     {
       title: "Deep Learning Specialization",
       issuer: "Stanford University, Coursera",
-      date: "2025",
+      date: "July 2025",
       color: "from-orange-500 to-yellow-500",
-      credentialUrl: "https://aws.amazon.com/certification/",
-      credentialId: "AWS-12345-XYZ",
+      credentialUrl:
+        "https://coursera.org/share/c0080c30be29b5e5b9d491d36905f4d2",
+      credentialId: "c0080c30be29b5e5b9d491d36905f4d2",
     },
 
     {
       title: "Database Structure & Management with MySQL",
       issuer: "Meta",
       date: "March 2023",
-      color: "from-red-500 to-pink-500",
+      color: "from-sky-500 to-blue-600",
       credentialUrl: "https://coursera.org/verify/UTHVG3HNVM4P",
       credentialId: "UTHVG3HNVM4P",
+    },
+    {
+      title: "Introduction To MongoDB",
+      issuer: "MongoDB ",
+      date: "2023",
+      color: "from-green-500 to-emerald-500",
+      credentialUrl: "https://learn.mongodb.com/c/PtRLf_ZsRxi_9ptI9BBkFg",
+      credentialId: "MDB32uqngh4im",
+    },
+    {
+      title: "Google Prompting Essentials Specialization",
+      issuer: "Google",
+      date: "Sept 2025",
+      color: "from-pink-500 to-amber-500",
+      credentialUrl:
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/RX6NEB783EUL",
+      credentialId: "RX6NEB783EUL",
     },
   ];
 
