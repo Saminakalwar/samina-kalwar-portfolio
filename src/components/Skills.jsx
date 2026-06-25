@@ -26,19 +26,27 @@ export default function Skills() {
         "REST APIs",
         "JWT Authentication",
         "WebSockets",
+        " ASP.NET Core, C#",
       ],
     },
     {
       title: "Database",
       icon: Database,
       color: "from-cyan-500 to-blue-500",
-      skills: ["MongoDB", "PostgreSQL", "Firebase", "Redis", "Mongoose"],
+      skills: ["MongoDB", "Oracle DB", "Firebase", "Redis", "Mongoose"],
     },
     {
       title: "Tools",
       icon: Wrench,
       color: "from-blue-500 to-indigo-500",
-      skills: ["Git/GitHub", "Docker", "Postman", "VS Code", "npm/yarn"],
+      skills: [
+        "Git/GitHub/Gitlab",
+        "Docker",
+        "Postman",
+        "VS Code",
+        "npm/yarn",
+        "Visual Studio",
+      ],
     },
   ];
 

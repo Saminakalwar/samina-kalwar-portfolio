@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Heart, Mail } from "lucide-react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   const navLinks = [
@@ -8,15 +8,16 @@ export default function Footer() {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
+    { name: "Services", href: "#services" },
+    { name: "Experience", href: "#experience" },
     { name: "Certificates", href: "#certificates" },
     { name: "Contact", href: "#contact" },
   ];
 
   const socialLinks = [
-    { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-    { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Mail, href: "mailto:samina@example.com", label: "Email" },
+    { icon: FaGithub, href: "https://github.com/Saminakalwar", label: "GitHub" },
+    { icon: FaLinkedin, href: "https://www.linkedin.com/in/samina-kalwar", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:kalwarsamina950@gmail.com", label: "Email" },
   ];
 
   return (
@@ -64,15 +65,13 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h4 className="text-lg font-semibold text-white mb-4">
-              Quick Links
-            </h4>
-            <nav className="space-y-2">
+            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <nav className="grid grid-cols-2 gap-x-4 gap-y-2">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block text-gray-400 hover:text-white hover:translate-x-2 transition-all"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all text-sm"
                 >
                   {link.name}
                 </a>
@@ -86,19 +85,15 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h4 className="text-lg font-semibold text-white mb-4">
-              Get In Touch
-            </h4>
+            <h4 className="text-lg font-semibold text-white mb-4">Get In Touch</h4>
             <div className="space-y-3 text-gray-400">
-              <p>📧 samina@example.com</p>
-              <p>📱 +1 (555) 123-4567</p>
-              <p>📍 San Francisco, CA</p>
+              <p>📧 kalwarsamina950@gmail.com</p>
+              <p>📱 +92 325 2636506</p>
+              <p>📍 Karachi, Pakistan</p>
               <div className="pt-4">
                 <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-lg">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm text-white">
-                    Available for Freelance
-                  </span>
+                  <span className="text-sm text-white">Available for Freelance</span>
                 </div>
               </div>
             </div>

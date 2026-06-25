@@ -51,7 +51,7 @@ export default function Experience() {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section id="experience" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -103,22 +103,16 @@ export default function Experience() {
                   whileHover={{ scale: 1.02 }}
                   className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/20 transition-all"
                 >
-                  <div className="flex items-start justify-between mb-2">
-                    <h3 className="text-xl font-bold text-white">
-                      {item.title}
-                    </h3>
+                  <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
+                    <h3 className="text-xl font-bold text-white">{item.title}</h3>
                     <span
-                      className={`px-3 py-1 bg-gradient-to-r ${item.color} bg-opacity-20 border border-white/10 rounded-full text-xs text-white`}
+                      className={`px-3 py-1 bg-gradient-to-r ${item.color} bg-opacity-20 border border-white/10 rounded-full text-xs text-white whitespace-nowrap`}
                     >
                       {item.period}
                     </span>
                   </div>
-                  <p className="text-purple-400 font-medium mb-3">
-                    {item.organization}
-                  </p>
-                  <p className="text-gray-400 leading-relaxed">
-                    {item.description}
-                  </p>
+                  <p className="text-purple-400 font-medium mb-3">{item.organization}</p>
+                  <p className="text-gray-400 leading-relaxed">{item.description}</p>
                 </motion.div>
               </div>
             </motion.div>

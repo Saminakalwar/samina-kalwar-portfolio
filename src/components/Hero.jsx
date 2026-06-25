@@ -1,16 +1,19 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaMailBulk } from "react-icons/fa";
-import {
-  //   Linkedin,
-  Mail,
-  ChevronDown,
-  Download,
-  ArrowRight,
-  Globe,
-} from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+import { Mail, ChevronDown, Download, ArrowRight } from "lucide-react";
 
 export default function Hero() {
-  const techStack = ["React", "Node.js", "TypeScript", "MongoDB", "Next.js"];
+  const techStack = [
+    "React",
+    "Node.js",
+    "TypeScript",
+    "Next.js",
+    "Express.js",
+    "MongoDB",
+    "Oracle DB",
+    "ASP.NET Core",
+  ];
 
   return (
     <section
@@ -104,7 +107,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="www.linkedin.com/in/samina-kalwar"
+              href="https://www.linkedin.com/in/samina-kalwar"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-indigo-500/50 transition-all group"
@@ -116,7 +119,7 @@ export default function Hero() {
               href="mailto:kalwarsamina950@gmail.com"
               className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-cyan-500/50 transition-all group"
             >
-              <FaMailBulk className="w-6 h-6 group-hover:text-cyan-400 transition-colors" />
+              <FaEnvelope className="w-6 h-6 group-hover:text-cyan-400 transition-colors" />
             </a>
           </motion.div>
 
