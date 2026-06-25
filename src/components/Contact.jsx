@@ -1,7 +1,15 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Loader,
+} from "lucide-react";
 import { useState } from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -9,17 +17,34 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState("idle"); // idle | loading | success | error
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setStatus("loading");
+    try {
+      const res = await fetch("https://formspree.io/f/xykqeznn", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (status !== "idle") setStatus("idle");
   };
 
   const contactInfo = [
@@ -32,10 +57,10 @@ export default function Contact() {
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+92 325 2636506",
+      href: "tel:+923252636506",
     },
-    { icon: MapPin, label: "Location", value: "San Francisco, CA", href: "#" },
+    { icon: MapPin, label: "Location", value: "Karachi, Pakistan", href: "#" },
   ];
 
   const socialLinks = [
@@ -46,11 +71,13 @@ export default function Contact() {
     },
     {
       icon: FaLinkedin,
-      href: "www.linkedin.com/in/samina-kalwar",
+      href: "https://www.linkedin.com/in/samina-kalwar",
       label: "LinkedIn",
     },
-    { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
   ];
+
+  const inputClass =
+    "w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all";
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
@@ -78,6 +105,7 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
+          {/* Left column */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -140,6 +168,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
+          {/* Right column — form */}
           <motion.form
             onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 50 }}
@@ -158,7 +187,7 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white"
+                className={inputClass}
                 placeholder="Your Name"
               />
             </div>
@@ -173,7 +202,7 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white"
+                className={inputClass}
                 placeholder="your.email@example.com"
               />
             </div>
@@ -188,20 +217,70 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 rows={6}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white"
+                className={inputClass}
                 placeholder="Tell me about your project..."
               />
             </div>
 
+            {/* Status messages */}
+            {status === "success" && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex items-center gap-3 p-4 bg-green-500/10 border border-green-500/30 rounded-lg text-green-400"
+              >
+                <CheckCircle className="w-5 h-5 shrink-0" />
+                <span>Message sent! I'll get back to you soon.</span>
+              </motion.div>
+            )}
+
+            {status === "error" && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex items-center gap-3 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400"
+              >
+                <AlertCircle className="w-5 h-5 shrink-0" />
+                <span>
+                  Something went wrong. Please try emailing me directly.
+                </span>
+              </motion.div>
+            )}
+
             <motion.button
               type="submit"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg text-white font-medium flex items-center justify-center gap-2"
+              disabled={status === "loading"}
+              whileHover={{ scale: status === "loading" ? 1 : 1.02 }}
+              whileTap={{ scale: status === "loading" ? 1 : 0.98 }}
+              className="w-full px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg text-white font-medium flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-lg hover:shadow-purple-500/30 transition-all"
             >
-              Send Message
-              <Send className="w-5 h-5" />
+              {status === "loading" ? (
+                <>
+                  <Loader className="w-5 h-5 animate-spin" />
+                  Sending...
+                </>
+              ) : (
+                <>
+                  Send Message
+                  <Send className="w-5 h-5" />
+                </>
+              )}
             </motion.button>
+
+            <p className="text-xs text-gray-500 text-center">
+              ⚙️ To activate: replace{" "}
+              <code className="text-purple-400">YOUR_FORM_ID</code> in
+              Contact.jsx with your free{" "}
+              <a
+                href="https://formspree.io"
+                target="_blank"
+                rel="noreferrer"
+                className="text-indigo-400 underline"
+              >
+                Formspree
+              </a>{" "}
+              ID.
+            </p>
           </motion.form>
         </div>
       </div>
