@@ -27,7 +27,7 @@ export default function Projects() {
         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
       tech: ["React", "Tailwind CSS", "Framer Motion"],
       color: "from-purple-500 to-pink-500",
-      liveUrl: "https://samina-kalwar-portfolio.vercel.app",
+      liveUrl: "https://samina-kalwar-portfolio.vercel.app/",
       githubUrl: "https://github.com/Saminakalwar/samina-kalwar-portfolio",
     },
   ];

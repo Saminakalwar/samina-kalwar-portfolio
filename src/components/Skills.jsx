@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code, Server, Database, Wrench } from "lucide-react";
+import { Code, Server, Database, Wrench, BrainCircuit } from "lucide-react";
 
 export default function Skills() {
   const skillCategories = [
@@ -26,7 +26,8 @@ export default function Skills() {
         "REST APIs",
         "JWT Authentication",
         "WebSockets",
-        " ASP.NET Core, C#",
+        "ASP.NET Core",
+        "C#",
       ],
     },
     {
@@ -47,6 +48,12 @@ export default function Skills() {
         "npm/yarn",
         "Visual Studio",
       ],
+    },
+    {
+      title: "AI & Machine Learning",
+      icon: BrainCircuit,
+      color: "from-pink-500 to-rose-500",
+      skills: ["Python", "AI/ML", "Deep Learning"],
     },
   ];
 
@@ -70,7 +77,7 @@ export default function Skills() {
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
