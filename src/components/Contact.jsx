@@ -267,7 +267,7 @@ export default function Contact() {
               )}
             </motion.button>
 
-            <p className="text-xs text-gray-500 text-center">
+            {/* <p className="text-xs text-gray-500 text-center">
               ⚙️ To activate: replace{" "}
               <code className="text-purple-400">YOUR_FORM_ID</code> in
               Contact.jsx with your free{" "}
@@ -280,7 +280,7 @@ export default function Contact() {
                 Formspree
               </a>{" "}
               ID.
-            </p>
+            </p> */}
           </motion.form>
         </div>
       </div>

@@ -30,17 +30,6 @@ export default function Projects() {
       liveUrl: "https://samina-kalwar-portfolio.vercel.app",
       githubUrl: "https://github.com/Saminakalwar/samina-kalwar-portfolio",
     },
-    {
-      title: "Full Stack Task Manager",
-      description:
-        "A collaborative task management application with real-time updates, team workspaces, and project tracking features built using modern web technologies.",
-      image:
-        "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?w=800&h=600&fit=crop",
-      tech: ["Next.js", "TypeScript", "PostgreSQL", "WebSocket"],
-      color: "from-cyan-500 to-blue-500",
-      liveUrl: "https://github.com/saminakalwar/task-manager",
-      githubUrl: "https://github.com/saminakalwar/task-manager",
-    },
   ];
 
   return (

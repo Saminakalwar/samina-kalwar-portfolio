@@ -81,14 +81,14 @@ export default function Hero() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
 
-            <a
+            {/* <a
               href="/resume.pdf"
               download="Samina_Kalwar_Resume.pdf"
               className="px-8 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-medium hover:bg-white/10 transition-all flex items-center gap-2"
             >
               <Download className="w-5 h-5" />
               Download Resume
-            </a>
+            </a> */}
           </motion.div>
 
           <motion.div

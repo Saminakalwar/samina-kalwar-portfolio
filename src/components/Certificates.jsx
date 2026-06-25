@@ -37,24 +37,6 @@ export default function Certificates() {
       credentialUrl: "https://coursera.org/verify/UTHVG3HNVM4P",
       credentialId: "UTHVG3HNVM4P",
     },
-    {
-      title: "Meta Front-End Developer",
-      issuer: "Meta (Coursera)",
-      date: "July 2023",
-      color: "from-indigo-500 to-purple-500",
-      credentialUrl:
-        "https://www.coursera.org/professional-certificates/meta-front-end-developer",
-      credentialId: "META-FE-321",
-    },
-    {
-      title: "Certified Ethical Hacker (CEH)",
-      issuer: "EC-Council",
-      date: "May 2023",
-      color: "from-purple-500 to-pink-500",
-      credentialUrl:
-        "https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/",
-      credentialId: "CEH-2023-159",
-    },
   ];
 
   return (

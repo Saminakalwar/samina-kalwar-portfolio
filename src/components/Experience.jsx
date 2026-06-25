@@ -36,7 +36,7 @@ export default function Experience() {
       organization: "Sukkur IBA University",
       period: "2021 – 2025",
       description:
-        "Graduated with a CGPA of 3.37/4.00 with a merit-based scholarship. Studied Web Engineering, Enterprise Application Development, Databases, Artificial Intelligence, and Data Science.",
+        "Graduated with a CGPA of 3.37/4.00 with a merit-based scholarship. Core Courses: Web Engineering, Enterprise Application Development, Databases, Artificial Intelligence, and Data Science.",
       color: "from-purple-500 to-pink-500",
     },
     {
@@ -104,15 +104,21 @@ export default function Experience() {
                   className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/20 transition-all"
                 >
                   <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
-                    <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                    <h3 className="text-xl font-bold text-white">
+                      {item.title}
+                    </h3>
                     <span
                       className={`px-3 py-1 bg-gradient-to-r ${item.color} bg-opacity-20 border border-white/10 rounded-full text-xs text-white whitespace-nowrap`}
                     >
                       {item.period}
                     </span>
                   </div>
-                  <p className="text-purple-400 font-medium mb-3">{item.organization}</p>
-                  <p className="text-gray-400 leading-relaxed">{item.description}</p>
+                  <p className="text-purple-400 font-medium mb-3">
+                    {item.organization}
+                  </p>
+                  <p className="text-gray-400 leading-relaxed">
+                    {item.description}
+                  </p>
                 </motion.div>
               </div>
             </motion.div>
