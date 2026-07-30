@@ -3,7 +3,7 @@ import { Code2, Database, Zap, Award } from "lucide-react";
 
 export default function About() {
   const stats = [
-    { icon: Code2, label: "Stack", value: "MERN" },
+    { icon: Code2, label: "Frontend & Backend", value: "React & Node" },
     { icon: Database, label: "Enterprise Backend", value: "ASP.NET & Oracle" },
     { icon: Zap, label: "Also Skilled In", value: "AI / ML" },
     { icon: Award, label: "Problem Solving", value: "Expert" },
@@ -13,7 +13,7 @@ export default function About() {
     <section id="about" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,43 +38,55 @@ export default function About() {
             className="space-y-6"
           >
             <div className="p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-purple-500/30 transition-all">
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                Full Stack Developer | Enterprise Backend & AI Enthusiast
-              </h3>
-              <p className="text-gray-400 leading-relaxed mb-4">
-                I'm Samina Kalwar, a Full Stack Developer who builds modern,
-                scalable web applications end-to-end — from responsive frontends
-                to robust, production-ready backend systems.
-              </p>
-              <p className="text-gray-400 leading-relaxed mb-4">
-                My core stack is{" "}
-                <span className="text-indigo-400 font-semibold">React.js</span>,{" "}
-                <span className="text-purple-400 font-semibold">Node.js</span>,{" "}
-                <span className="text-cyan-400 font-semibold">Express.js</span>,
-                and{" "}
-                <span className="text-green-500 font-semibold">MongoDB</span>{" "}
-                (MERN). Alongside this, I'm expanding into enterprise-grade
-                backend development with{" "}
-                <span className="text-blue-400 font-semibold">
-                  ASP.NET Core
-                </span>{" "}
-                and{" "}
-                <span className="text-orange-400 font-semibold">
-                  Oracle Database
-                </span>
-                , building secure, scalable systems suited for large-scale
-                business applications.
-              </p>
-              <p className="text-gray-400 leading-relaxed">
-                I also bring hands-on experience in{" "}
-                <span className="text-pink-400 font-semibold">
-                  Artificial Intelligence
-                </span>{" "}
-                — applied through my Final Year Project and several freelance
-                projects — giving me a practical edge in building intelligent
-                features into real-world applications.
-              </p>
-            </div>
+  <h3 className="text-2xl font-bold mb-5 bg-gradient-to-r from-white via-purple-200 to-cyan-300 bg-clip-text text-transparent">
+    <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+      Full Stack Developer | MERN • ASP.NET Core</span>
+    
+  </h3>
+
+  <p className="text-gray-400 leading-7 mb-4">
+    I'm a Full Stack Developer with a Computer Science background, currently building enterprise applications
+    in the insurance industry. I develop modern{" "}
+    <span className="text-cyan-400 font-semibold">React</span> frontends and
+    secure{" "}
+    <span className="text-blue-400 font-semibold">ASP.NET Core</span>{" "}
+    backends powered by{" "}
+    <span className="text-orange-400 font-semibold">Oracle</span> and{" "}
+    <span className="text-green-400 font-semibold">SQL Server</span>, with a
+    strong focus on{" "}
+    <span className="text-purple-400 font-semibold">
+      clean architecture
+    </span>
+    , performance, and maintainable code, while also having strong hands-on
+    experience building backend applications with{" "}
+    <span className="text-purple-400 font-semibold">Node.js</span> and{" "}
+    <span className="text-pink-400 font-semibold">Express.js</span>.
+  </p>
+
+  <p className="text-gray-400 leading-8">
+    My expertise spans{" "}
+    <span className="text-cyan-400 font-semibold">React</span>,{" "}
+    <span className="text-purple-400 font-semibold">Node.js</span>,{" "}
+    <span className="text-pink-400 font-semibold">Express.js</span>,{" "}
+    <span className="text-blue-400 font-semibold">ASP.NET Core</span>,{" "}
+    <span className="text-orange-400 font-semibold">Oracle</span>,{" "}
+    <span className="text-green-400 font-semibold">SQL Server</span>, and{" "}
+    <span className="text-teal-400 font-semibold">
+      Entity Framework Core
+    </span>
+    . I also have practical experience applying{" "}
+    <span className="text-yellow-400 font-semibold">
+      Artificial Intelligence
+    </span>{" "}
+    in real-world projects and enjoy building intelligent, scalable web
+    solutions. I'm open to{" "}
+    <span className="text-blue-400 font-semibold">
+      full-time opportunities
+    </span>
+    , <span className="text-blue-400 font-semibold">freelance projects</span>,
+    and exciting collaborations.
+  </p>
+</div>
           </motion.div>
 
           <motion.div

@@ -88,7 +88,6 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-white mb-4">Get In Touch</h4>
             <div className="space-y-3 text-gray-400">
               <p>📧 kalwarsamina950@gmail.com</p>
-              <p>📱 +92 325 2636506</p>
               <p>📍 Karachi, Pakistan</p>
               <div className="pt-4">
                 <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-lg">

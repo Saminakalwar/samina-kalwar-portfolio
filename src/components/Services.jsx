@@ -3,9 +3,9 @@ import {
   Code,
   Layout,
   Server,
-  Smartphone,
+  Globe,
   Database,
-  Shield,
+  Sparkles,
 } from "lucide-react";
 
 export default function Services() {
@@ -14,42 +14,42 @@ export default function Services() {
       icon: Layout,
       title: "Frontend Development",
       description:
-        "Building responsive, interactive user interfaces with React, Next.js, and modern CSS frameworks.",
+        "Building responsive, interactive user interfaces with React and modern CSS — clean, accessible, and fast.",
       color: "from-indigo-500 to-purple-500",
     },
     {
       icon: Code,
-      title: "Full Stack Web Apps",
+      title: "Full Stack Web Applications",
       description:
-        "End-to-end web application development with seamless frontend-backend integration.",
+        "End-to-end apps with a React frontend backed by Node.js/Express or ASP.NET Core, wired together cleanly.",
       color: "from-purple-500 to-pink-500",
     },
     {
       icon: Server,
-      title: "MERN Stack Development",
+      title: "Enterprise Backend Development",
       description:
-        "Specialized in MongoDB, Express.js, React.js, and Node.js for robust applications.",
+        "Secure, scalable APIs and business logic with ASP.NET Core, Oracle, and SQL Server for production systems.",
       color: "from-cyan-500 to-blue-500",
     },
     {
-      icon: Database,
-      title: "API Integration",
+      icon: Globe,
+      title: "Landing Pages & Portfolios",
       description:
-        "RESTful API design, implementation, and third-party service integration.",
+        "Fast, polished, custom-built sites for personal brands, startups, or small businesses — no templates.",
       color: "from-blue-500 to-indigo-500",
     },
     {
-      icon: Smartphone,
-      title: "Responsive UI/UX",
+      icon: Database,
+      title: "API Integration & Dashboards",
       description:
-        "Creating mobile-first, accessible designs that work beautifully across all devices.",
+        "RESTful API design, third-party integrations, and feature-rich admin dashboards with data visualization.",
       color: "from-pink-500 to-purple-500",
     },
     {
-      icon: Shield,
-      title: "Admin Dashboards",
+      icon: Sparkles,
+      title: "AI-Assisted Features & ML Projects",
       description:
-        "Feature-rich admin panels with analytics, data visualization, and management tools.",
+        "Integrating AI features into web apps, plus support with dataset preparation and model training tasks.",
       color: "from-indigo-500 to-cyan-500",
     },
   ];
@@ -58,7 +58,7 @@ export default function Services() {
     <section id="services" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-900/5 to-transparent"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

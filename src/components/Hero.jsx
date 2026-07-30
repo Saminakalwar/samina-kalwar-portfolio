@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
-import { Mail, ChevronDown, Download, ArrowRight } from "lucide-react";
+import { ChevronDown, ArrowRight, User } from "lucide-react";
 
 export default function Hero() {
+  const [avatarError, setAvatarError] = useState(false);
+
   const techStack = [
     "React",
     "Node.js",
@@ -12,13 +15,14 @@ export default function Hero() {
     "Express.js",
     "MongoDB",
     "Oracle DB",
+    "SQL Server",
     "ASP.NET Core",
   ];
 
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
+      className="min-h-screen flex items-center relative overflow-hidden pt-24 pb-12"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-purple-900/20 to-cyan-900/20"></div>
 
@@ -28,118 +32,172 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-6"
-          >
-            <span className="inline-block px-4 py-2 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-full text-sm text-indigo-300 backdrop-blur-sm">
-              Welcome to my portfolio
-            </span>
-          </motion.div>
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          {/* Left column — details */}
+          <div className="text-center lg:text-left">
+           <div className="mb-4">
+  {/* Small greeting */}
+  <motion.p
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="text-lg sm:text-xl text-gray-400 mb-2"
+  >
+    Hi, I'm
+  </motion.p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
-          >
-            <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-              Full Stack Developer &
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              MERN Stack Engineer
-            </span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto"
-          >
-            Building modern, scalable web applications with cutting-edge
-            technologies. Passionate about creating seamless user experiences
-            and robust backend solutions.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-wrap items-center justify-center gap-4 mb-12"
-          >
-            <a
-              href="#projects"
-              className="group px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all flex items-center gap-2"
+  {/* Large Name */}
+  <motion.h1
+    className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight"
+  >
+    {"Samina Kalwar".split("").map((char, index) => (
+      <motion.span
+        key={index}
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: index * 0.05,
+          duration: 0.3,
+        }}
+        className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent"
+      >
+        {char === " " ? "\u00A0" : char}
+      </motion.span>
+    ))}
+  </motion.h1>
+</div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.1 }}
+              className="text-xl sm:text-2xl font-semibold mb-6"
             >
-              View Projects
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+              <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Full Stack Developer
+              </span>
+            </motion.h2>
 
-            {/* <a
-              href="/resume.pdf"
-              download="Samina_Kalwar_Resume.pdf"
-              className="px-8 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-medium hover:bg-white/10 transition-all flex items-center gap-2"
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-lg text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              <Download className="w-5 h-5" />
-              Download Resume
-            </a> */}
-          </motion.div>
+              I deliver clean React interfaces on the frontend, and secure
+              ASP.NET Core &amp; Oracle/SQL systems on the backend. Currently
+              building enterprise software in the insurance industry, and
+              open to freelance and full-time work — web apps, landing
+              pages, portfolios, or enterprise-level business applications
+              with AI-driven features.
+            </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex items-center justify-center gap-6 mb-12"
-          >
-            <a
-              href="https://github.com/Saminakalwar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-purple-500/50 transition-all group"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10"
             >
-              <FaGithub className="w-6 h-6 group-hover:text-purple-400 transition-colors" />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/samina-kalwar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-indigo-500/50 transition-all group"
-            >
-              <FaLinkedin className="w-6 h-6 group-hover:text-indigo-400 transition-colors" />
-            </a>
-
-            <a
-              href="mailto:kalwarsamina950@gmail.com"
-              className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-cyan-500/50 transition-all group"
-            >
-              <FaEnvelope className="w-6 h-6 group-hover:text-cyan-400 transition-colors" />
-            </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1 }}
-            className="flex flex-wrap items-center justify-center gap-3"
-          >
-            {techStack.map((tech, index) => (
-              <motion.span
-                key={tech}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1 + index * 0.1 }}
-                className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-gray-300 backdrop-blur-sm hover:bg-white/10 transition-all"
+              <a
+                href="#projects"
+                className="group px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all flex items-center gap-2"
               >
-                {tech}
-              </motion.span>
-            ))}
+                View Projects
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+
+              {/* <a
+                href="/resume.pdf"
+                download="Samina_Kalwar_Resume.pdf"
+                className="px-8 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-medium hover:bg-white/10 transition-all flex items-center gap-2"
+              >
+                <Download className="w-5 h-5" />
+                Download Resume
+              </a> */}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="flex items-center justify-center lg:justify-start gap-6 mb-10"
+            >
+              <a
+                href="https://github.com/Saminakalwar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-purple-500/50 transition-all group"
+              >
+                <FaGithub className="w-6 h-6 group-hover:text-purple-400 transition-colors" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/samina-kalwar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-indigo-500/50 transition-all group"
+              >
+                <FaLinkedin className="w-6 h-6 group-hover:text-indigo-400 transition-colors" />
+              </a>
+
+              <a
+                href="mailto:kalwarsamina950@gmail.com"
+                className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-cyan-500/50 transition-all group"
+              >
+                <FaEnvelope className="w-6 h-6 group-hover:text-cyan-400 transition-colors" />
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 1 }}
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-3"
+            >
+              {techStack.map((tech, index) => (
+                <motion.span
+                  key={tech}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1 + index * 0.1 }}
+                  className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm text-gray-300 backdrop-blur-sm hover:bg-white/10 transition-all"
+                >
+                  {tech}
+                </motion.span>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Right column — circular photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="flex justify-center lg:justify-end order-first lg:order-last"
+          >
+            <div className="relative">
+              {/* soft static glow behind the photo */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-cyan-500/20 blur-2xl"></div>
+
+              {/*
+                Photo slot.
+                Drop your image at: public/avatar.png (or .jpg/.webp — update the src below to match).
+                It will then be served from the site root at /avatar.png automatically.
+                Falls back to a placeholder icon until the file exists.
+              */}
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-[26rem] md:h-[26rem] rounded-full overflow-hidden border-4 border-purple-500/40 shadow-xl shadow-purple-500/20 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 flex items-center justify-center z-10">
+                {!avatarError ? (
+                  <img
+                    src="/avatar.png"
+                    alt="Samina Kalwar"
+                    className="w-full h-full object-cover"
+                    onError={() => setAvatarError(true)}
+                  />
+                ) : (
+                  <User className="w-28 h-28 text-purple-300" />
+                )}
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -148,7 +206,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden sm:block"
       >
         <a
           href="#about"

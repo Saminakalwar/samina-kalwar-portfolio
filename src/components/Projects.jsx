@@ -9,7 +9,7 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Notes Management Application",
+      title: "NoteSpace - Notes Management App",
       description:
         "A full-stack notes app that lets users create, organize, and manage their notes with a clean dashboard interface. Features authentication and real-time updates.",
       image:
@@ -34,7 +34,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-20 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

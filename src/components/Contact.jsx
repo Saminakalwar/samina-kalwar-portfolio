@@ -3,6 +3,7 @@ import {
   Mail,
   MapPin,
   Phone,
+  Briefcase,
   Send,
   CheckCircle,
   AlertCircle,
@@ -47,21 +48,42 @@ export default function Contact() {
     if (status !== "idle") setStatus("idle");
   };
 
+  // const contactInfo = [
+  //   {
+  //     icon: Mail,
+  //     label: "Email",
+  //     value: "kalwarsamina950@gmail.com",
+  //     href: "mailto:kalwarsamina950@gmail.com",
+  //   },
+  //   { icon: MapPin, label: "Location", value: "Karachi, Pakistan", href: "#" },
+  //    {
+  //     icon: Phone,
+  //     label: "Phone",
+  //     value: "+92 325 2636506",
+  //     href: "tel:+923252636506",
+  //   },
+  // ];
+
   const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "kalwarsamina950@gmail.com",
-      href: "mailto:kalwarsamina950@gmail.com",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+92 325 2636506",
-      href: "tel:+923252636506",
-    },
-    { icon: MapPin, label: "Location", value: "Karachi, Pakistan", href: "#" },
-  ];
+  {
+    icon: Mail,
+    label: "Email",
+    value: "kalwarsamina950@gmail.com",
+    href: "mailto:kalwarsamina950@gmail.com",
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: "Karachi, Pakistan",
+    href: "#",
+  },
+  {
+    icon: Briefcase,
+    label: "Availability",
+    value: "Open to Full-time & Freelance",
+    href: "#",
+  },
+];
 
   const socialLinks = [
     {
@@ -83,7 +105,7 @@ export default function Contact() {
     <section id="contact" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -9,8 +9,17 @@ export default function Experience() {
       organization: "EFU General Insurance Ltd, Head Office, Karachi",
       period: "Jan 2026 – Present",
       description:
-        "Developing scalable Full stack applications in an Agile environment, building reusable React components, integrating RESTful APIs, optimizing frontend performance, and modernizing legacy systems into responsive production-ready applications.",
+        "Working full stack on enterprise insurance applications in an Agile environment. On the frontend, building React-based dashboards and internal tools with reusable components and RESTful API integration. On the backend, developing REST APIs and business logic with ASP.NET Core against an Oracle database, including report generation, role-based access control, and modernizing legacy modules into production-ready systems.",
       color: "from-cyan-500 to-blue-500",
+    },
+    {
+      icon: Briefcase,
+      title: ".NET Full Stack Developer Intern",
+      organization: "10Pearls Pakistan, Karachi",
+      period: "July 2026 – Present",
+      description:
+        "Developing a production-level application using Clean Layered Architecture with ASP.NET Core and React. Implementing Entity Framework for data access, Serilog for structured logging, and SQL Server for the database layer. Following SonarQube-driven code quality standards and a feature-based Git workflow with pull request reviews.",
+      color: "from-teal-500 to-cyan-500",
     },
     {
       icon: Briefcase,
@@ -18,7 +27,7 @@ export default function Experience() {
       organization: "10Pearls Pakistan, Karachi",
       period: "Sep 2025 – Nov 2025",
       description:
-        "Built a full-stack MERN application with JWT authentication, role-based access control, REST APIs, middleware architecture, and structured backend logic while following clean coding and Agile development practices.",
+        "Built a full-stack MERN application with JWT authentication, role-based access control, REST APIs, middleware architecture, Jest & Mocha chai unit testings, SonarQube driven code quality and structured backend logic while following clean coding and Agile development practices.",
       color: "from-blue-500 to-indigo-500",
     },
     {
@@ -54,7 +63,7 @@ export default function Experience() {
     <section id="experience" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
