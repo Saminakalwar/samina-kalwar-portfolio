@@ -60,11 +60,7 @@ className="font-semibold hover:text-white hover:text-purple-300 transition-color
 
         {/* Right: avatar + mobile hamburger */}
         <div className="flex items-center gap-3">
-          {/* Avatar
-              Drop your image at: public/avatar.png (or .jpg/.webp — update the src below to match)
-              It will then be served from the site root at /avatar.png automatically.
-              Until the file exists, this falls back to a placeholder icon. */}
-          <div
+          {/* <div
             className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden shrink-0 border-2 border-purple-500/40 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/30 transition-all bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center"
             title="Samina Kalwar"
           >
@@ -78,7 +74,7 @@ className="font-semibold hover:text-white hover:text-purple-300 transition-color
             ) : (
               <User className="w-5 h-5 text-purple-300" />
             )}
-          </div>
+          </div> */}
 
           <button
             className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
