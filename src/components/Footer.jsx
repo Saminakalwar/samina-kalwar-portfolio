@@ -15,27 +15,33 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: FaGithub, href: "https://github.com/Saminakalwar", label: "GitHub" },
-    { icon: FaLinkedin, href: "https://www.linkedin.com/in/samina-kalwar", label: "LinkedIn" },
+    {
+      icon: FaGithub,
+      href: "https://github.com/Saminakalwar",
+      label: "GitHub",
+    },
+    {
+      icon: FaLinkedin,
+      href: "https://www.linkedin.com/in/samina-kalwar",
+      label: "LinkedIn",
+    },
     { icon: Mail, href: "mailto:kalwarsamina950@gmail.com", label: "Email" },
   ];
 
   return (
     <footer className="relative overflow-hidden border-t border-white/10">
-      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/10 to-transparent"></div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-9 2xl:py-12 relative z-10">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-6 2xl:gap-8 mb-8 lg:mb-6 2xl:mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent mb-4">
+            <h3 className="text-2xl lg:text-xl 2xl:text-2xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent mb-4 lg:mb-3 2xl:mb-4">
               Samina Kalwar
             </h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-400 text-base lg:text-sm 2xl:text-base mb-4 lg:mb-3 2xl:mb-4">
               Full Stack Developer specializing in MERN stack. Building modern
               web applications with passion and precision.
             </p>
@@ -51,7 +57,7 @@ export default function Footer() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   whileHover={{ scale: 1.1 }}
-                  className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-indigo-500 hover:to-purple-500 hover:border-transparent transition-all"
+                  className="w-10 h-10 lg:w-9 lg:h-9 2xl:w-10 2xl:h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-indigo-500 hover:to-purple-500 hover:border-transparent transition-all"
                 >
                   <social.icon className="w-5 h-5" />
                 </motion.a>
@@ -65,7 +71,9 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <h4 className="text-lg lg:text-base 2xl:text-lg font-semibold text-white mb-4 lg:mb-3 2xl:mb-4">
+              Quick Links
+            </h4>
             <nav className="grid grid-cols-2 gap-x-4 gap-y-2">
               {navLinks.map((link) => (
                 <a
@@ -85,14 +93,18 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h4 className="text-lg font-semibold text-white mb-4">Get In Touch</h4>
+            <h4 className="text-lg lg:text-base 2xl:text-lg font-semibold text-white mb-4 lg:mb-3 2xl:mb-4">
+              Get In Touch
+            </h4>
             <div className="space-y-3 text-gray-400">
               <p>📧 kalwarsamina950@gmail.com</p>
               <p>📍 Karachi, Pakistan</p>
               <div className="pt-4">
                 <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-lg">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm text-white">Available for Freelance</span>
+                  <span className="text-sm text-white">
+                    Available for Freelance
+                  </span>
                 </div>
               </div>
             </div>

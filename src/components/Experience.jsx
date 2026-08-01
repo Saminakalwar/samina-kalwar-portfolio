@@ -60,18 +60,19 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
-
+    <section
+      id="experience"
+      className="py-20 lg:py-16 2xl:py-20 relative overflow-hidden"
+    >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 lg:mb-10 2xl:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-4xl 2xl:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Experience & Education
             </span>
@@ -89,7 +90,7 @@ export default function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative flex items-center mb-12 ${
+              className={`relative flex items-center mb-12 lg:mb-8 2xl:mb-12 ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
@@ -97,11 +98,11 @@ export default function Experience() {
                 className={`flex-1 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"} hidden md:block`}
               ></div>
 
-              <div className="absolute left-8 md:left-1/2 w-16 h-16 -ml-8 flex items-center justify-center">
+              <div className="absolute left-8 md:left-1/2 w-16 h-16 lg:w-12 lg:h-12 2xl:w-16 2xl:h-16 -ml-8 lg:-ml-6 2xl:-ml-8 flex items-center justify-center">
                 <div
-                  className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center shadow-lg shadow-purple-500/30 border-4 border-[#0B0F19]`}
+                  className={`w-16 h-16 lg:w-12 lg:h-12 2xl:w-16 2xl:h-16 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center shadow-lg shadow-purple-500/30 border-4 border-black`}
                 >
-                  <item.icon className="w-7 h-7 text-white" />
+                  <item.icon className="w-7 h-7 lg:w-5 lg:h-5 2xl:w-7 2xl:h-7 text-white" />
                 </div>
               </div>
 
@@ -110,10 +111,10 @@ export default function Experience() {
               >
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/20 transition-all"
+                  className="p-6 lg:p-5 2xl:p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/20 transition-all"
                 >
                   <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
-                    <h3 className="text-xl font-bold text-white">
+                    <h3 className="text-xl lg:text-lg 2xl:text-xl font-bold text-white">
                       {item.title}
                     </h3>
                     <span
@@ -122,10 +123,10 @@ export default function Experience() {
                       {item.period}
                     </span>
                   </div>
-                  <p className="text-purple-400 font-medium mb-3">
+                  <p className="text-purple-400 font-medium mb-3 lg:mb-2 2xl:mb-3 text-base lg:text-sm 2xl:text-base">
                     {item.organization}
                   </p>
-                  <p className="text-gray-400 leading-relaxed">
+                  <p className="text-gray-400 text-base lg:text-sm 2xl:text-base leading-relaxed">
                     {item.description}
                   </p>
                 </motion.div>

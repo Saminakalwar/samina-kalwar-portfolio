@@ -33,22 +33,25 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-20 lg:py-16 2xl:py-20 relative overflow-hidden"
+    >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 lg:mb-10 2xl:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text">
+          <h2 className="text-4xl md:text-5xl lg:text-4xl 2xl:text-5xl font-bold mb-4 text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text">
             Featured Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-6 2xl:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -61,13 +64,17 @@ export default function Projects() {
             >
               <img
                 src={project.image}
-                className="h-48 w-full object-cover"
+                className="h-48 lg:h-40 2xl:h-48 w-full object-cover"
                 alt={project.title}
               />
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
+              <div className="p-6 lg:p-5 2xl:p-6">
+                <h3 className="text-xl lg:text-lg 2xl:text-xl font-bold mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-gray-400 text-base lg:text-sm 2xl:text-base mb-4 lg:mb-3 2xl:mb-4">
+                  {project.description}
+                </p>
 
                 <div className="flex gap-2 mb-4 flex-wrap">
                   {project.tech.map((t) => (

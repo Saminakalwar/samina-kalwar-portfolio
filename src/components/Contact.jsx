@@ -65,25 +65,25 @@ export default function Contact() {
   // ];
 
   const contactInfo = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "kalwarsamina950@gmail.com",
-    href: "mailto:kalwarsamina950@gmail.com",
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "Karachi, Pakistan",
-    href: "#",
-  },
-  {
-    icon: Briefcase,
-    label: "Availability",
-    value: "Open to Full-time & Freelance",
-    href: "#",
-  },
-];
+    {
+      icon: Mail,
+      label: "Email",
+      value: "kalwarsamina950@gmail.com",
+      href: "mailto:kalwarsamina950@gmail.com",
+    },
+    {
+      icon: MapPin,
+      label: "Location",
+      value: "Karachi, Pakistan",
+      href: "#",
+    },
+    {
+      icon: Briefcase,
+      label: "Availability",
+      value: "Open to Full-time & Freelance",
+      href: "#",
+    },
+  ];
 
   const socialLinks = [
     {
@@ -99,43 +99,44 @@ export default function Contact() {
   ];
 
   const inputClass =
-    "w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all";
+    "w-full px-4 py-3 lg:py-2.5 2xl:py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all";
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
-
+    <section
+      id="contact"
+      className="py-20 lg:py-16 2xl:py-20 relative overflow-hidden"
+    >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 lg:mb-10 2xl:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-4xl 2xl:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Get In Touch
             </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full mb-4"></div>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-400 text-base lg:text-sm 2xl:text-base max-w-2xl mx-auto">
             I'm currently available for freelance work. If you have a project
             that you want to get started, think you need my help with something
             or just fancy saying hey, then get in touch.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-8 2xl:gap-12">
           {/* Left column */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-8"
+            className="space-y-8 lg:space-y-6 2xl:space-y-8"
           >
-            <div className="p-6 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-2xl backdrop-blur-sm">
+            <div className="p-6 lg:p-5 2xl:p-6 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-2xl backdrop-blur-sm">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                 <span className="text-white font-semibold">
@@ -147,7 +148,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-4 lg:space-y-3 2xl:space-y-4">
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={info.label}
@@ -157,14 +158,16 @@ export default function Contact() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   whileHover={{ x: 10 }}
-                  className="flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/20 transition-all group"
+                  className="flex items-center gap-4 p-4 lg:p-3 2xl:p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/20 transition-all group"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <info.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 lg:w-10 lg:h-10 2xl:w-12 2xl:h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                    <info.icon className="w-6 h-6 lg:w-5 lg:h-5 2xl:w-6 2xl:h-6 text-white" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">{info.label}</p>
-                    <p className="text-white font-medium">{info.value}</p>
+                    <p className="text-white font-medium text-base lg:text-sm 2xl:text-base">
+                      {info.value}
+                    </p>
                   </div>
                 </motion.a>
               ))}
@@ -197,7 +200,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="space-y-6 lg:space-y-4 2xl:space-y-6"
           >
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">

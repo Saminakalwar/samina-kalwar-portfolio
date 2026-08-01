@@ -59,18 +59,19 @@ export default function Certificates() {
   ];
 
   return (
-    <section id="certificates" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-900/5 to-transparent"></div>
-
+    <section
+      id="certificates"
+      className="py-20 lg:py-16 2xl:py-20 relative overflow-hidden"
+    >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 lg:mb-10 2xl:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-4xl 2xl:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Certifications & Achievements
             </span>
@@ -78,7 +79,7 @@ export default function Certificates() {
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-4 2xl:gap-6">
           {certificates.map((cert, index) => (
             <motion.div
               key={cert.credentialId}
@@ -87,21 +88,21 @@ export default function Certificates() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/20 transition-all group"
+              className="p-6 lg:p-5 2xl:p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/20 transition-all group"
             >
               <div
-                className={`w-14 h-14 bg-gradient-to-br ${cert.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
+                className={`w-14 h-14 lg:w-11 lg:h-11 2xl:w-14 2xl:h-14 bg-gradient-to-br ${cert.color} rounded-xl flex items-center justify-center mb-4 lg:mb-3 2xl:mb-4 group-hover:scale-110 transition-transform`}
               >
-                <Award className="w-7 h-7 text-white" />
+                <Award className="w-7 h-7 lg:w-5 lg:h-5 2xl:w-7 2xl:h-7 text-white" />
               </div>
 
-              <h3 className="text-lg font-bold text-white mb-2">
+              <h3 className="text-lg lg:text-base 2xl:text-lg font-bold text-white mb-2">
                 {cert.title}
               </h3>
               <p className="text-purple-400 text-sm mb-1">{cert.issuer}</p>
               <p className="text-gray-500 text-xs mb-4">{cert.date}</p>
 
-              <div className="mb-4 p-2 bg-white/5 rounded-lg">
+              <div className="mb-4 lg:mb-3 2xl:mb-4 p-2 bg-white/5 rounded-lg">
                 <p className="text-xs text-gray-400">Credential ID</p>
                 <p className="text-xs text-white font-mono">
                   {cert.credentialId}
